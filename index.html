@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lumière Peau | The Essence of Light</title>
+    <meta name="description" content="Discover Lumière Éclat, the new weightless foundation that lets your inner light shine through. Infused with wild pansy and iris extract.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lumiere-peau.com/">
+    <meta property="og:title" content="Lumière Peau | The Essence of Light">
+    <meta property="og:description" content="Discover Lumière Éclat, the new weightless foundation that lets your inner light shine through.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?q=80&w=2574&auto=format&fit=crop">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://lumiere-peau.com/">
+    <meta property="twitter:title" content="Lumière Peau | The Essence of Light">
+    <meta property="twitter:description" content="Discover Lumière Éclat, the new weightless foundation that lets your inner light shine through.">
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?q=80&w=2574&auto=format&fit=crop">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Lato', 'sans-serif'],
+              serif: ['Playfair Display', 'serif'],
+              display: ['Cinzel', 'serif'],
+            },
+            colors: {
+              brand: {
+                50: '#f9f7f5',
+                100: '#f0ece9',
+                200: '#e0d8d3',
+                300: '#cbbdb5',
+                400: '#b59e94',
+                500: '#9f8276',
+                600: '#86695e',
+                800: '#584640',
+                900: '#4a3b36',
+              }
+            },
+            animation: {
+              'fade-in-up': 'fadeInUp 1s ease-out forwards',
+            },
+            keyframes: {
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Custom utility for hide scrollbar */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-brand-50 text-brand-900 antialiased selection:bg-brand-200 selection:text-brand-900">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
