@@ -96,10 +96,10 @@ const Hero: React.FC = () => {
             />
 
             {/* Floating Badge (Similar to reference 'Review No.1' etc) */}
-            <div className="absolute top-10 -right-4 md:-right-10 w-24 h-24 bg-white/90 backdrop-blur-md rounded-full shadow-lg flex flex-col items-center justify-center border border-pink-100 p-2 animate-float-slow">
-              <span className="text-[10px] text-pink-400 font-bold tracking-widest">VOCE</span>
-              <span className="text-lg font-display text-pink-500 font-bold leading-none mt-1">NO.1</span>
-              <span className="text-[8px] text-slate-400 mt-1 center text-center">2025新作<br />ファンデ</span>
+            <div className="absolute top-10 -right-4 md:-right-10 w-24 h-24 bg-white/90 backdrop-blur-md rounded-full shadow-lg flex flex-col items-center justify-center border border-water-100 p-2 animate-float-slow">
+              <span className="text-[9px] text-brand-500 font-bold tracking-tight">美容液成分</span>
+              <span className="text-2xl font-display text-water-600 font-bold leading-none mt-1">86<span className="text-sm">%</span></span>
+              <span className="text-[9px] text-slate-400 mt-1 center text-center tracking-widest">高保湿</span>
             </div>
           </motion.div>
         </motion.div>
