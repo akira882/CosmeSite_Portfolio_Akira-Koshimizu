@@ -73,7 +73,7 @@ const App: React.FC = () => {
           <OrbisUXProposal />
 
           {/* Project Insight & Strategy (For Recruiters - Keep as legacy or remove if redundant, keeping for now) */}
-          <ProjectInsight />
+          {/* <ProjectInsight /> */}
         </main>
 
         <Footer />
