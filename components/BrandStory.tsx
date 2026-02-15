@@ -5,7 +5,7 @@ const BrandStory: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   return (
-    <section ref={containerRef} className="py-24 md:py-32 px-6 bg-white relative overflow-hidden">
+    <section id="philosophy" ref={containerRef} className="py-24 md:py-32 px-6 bg-white relative overflow-hidden">
       {/* Background Decorative Element (Subtle Water Flow) */}
       <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-b from-water-50 to-transparent opacity-60 blur-3xl rounded-full translate-x-1/3 -translate-y-1/2 pointer-events-none"></div>
 

@@ -4,6 +4,7 @@ import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 
 const Features: React.FC = () => {
   const { elementRef, isVisible } = useIntersectionObserver({ threshold: 0.2, rootMargin: '0px' });
+  const ref = elementRef; // Assuming 'ref' in the instruction refers to elementRef from useIntersectionObserver
 
   return (
     <section id="science" className="py-24 bg-white">
