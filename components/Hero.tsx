@@ -95,17 +95,13 @@ const Hero: React.FC = () => {
               className="w-full h-auto drop-shadow-2xl object-contain hover:scale-105 transition-transform duration-700 ease-out"
             />
 
-            {/* Floating Badge (Similar to reference 'Review No.1' etc) */}
-            <div className="absolute top-6 -right-8 md:-right-16 w-36 h-36 bg-white rounded-full shadow-2xl shadow-water-200/40 flex flex-col items-center justify-center border-4 border-white ring-1 ring-water-50 animate-float-slow z-20">
-              <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-white to-water-50/40 opacity-50"></div>
-              <div className="relative z-10 flex flex-col items-center">
-                <span className="text-xs text-brand-800 font-bold tracking-wider mb-0.5">美容液成分</span>
-                <div className="flex items-baseline justify-center text-water-600 leading-none">
-                  <span className="font-display text-6xl font-medium tracking-tighter">86</span>
-                  <span className="font-sans text-xl font-light ml-0.5 -translate-y-1">%</span>
+            <div className="absolute top-6 -right-8 md:-right-16 w-36 h-36 bg-white rounded-full shadow-xl shadow-water-100/20 flex flex-col items-center justify-center border border-water-200 animate-float-slow z-20">
+              <div className="relative z-10 flex flex-col items-center justify-center translate-y-[2px]">
+                <span className="text-[0.85rem] text-brand-900 font-bold tracking-widest mb-1">美容液成分</span>
+                <div className="flex items-baseline justify-center text-brand-900 leading-none">
+                  <span className="font-display text-[4rem] font-medium tracking-tighter">86</span>
+                  <span className="font-display text-2xl font-light ml-0.5 -translate-y-1">%</span>
                 </div>
-                <div className="w-10 h-[1px] bg-water-200/80 my-2"></div>
-                <span className="text-[11px] text-brand-700 tracking-[0.2em] font-medium text-center">高保湿</span>
               </div>
             </div>
           </motion.div>
