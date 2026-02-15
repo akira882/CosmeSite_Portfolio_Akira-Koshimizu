@@ -45,23 +45,23 @@ export const TESTIMONIALS: Testimonial[] = [
 
 export const FEATURES = [
   {
-    title: "24時間 濃密保湿",
-    description: "野生のパンジーエキスが水分循環をサポート。落とした後も、もちもちの肌へ。",
+    title: "モイスチャーマグネット処方",
+    description: "空気中の水分を引き寄せ、肌の潤いを逃さない。乾燥崩れを防ぎ、夕方まで瑞々しさをキープ。",
     icon: <Droplets className="w-6 h-6" />
   },
   {
-    title: "素肌のような軽さ",
-    description: "独自のマイクロメッシュ構造が肌の呼吸を妨げず、つけていることを忘れる解放感。",
+    title: "エアリーフィット設計",
+    description: "皮膚の呼吸を妨げないマイクロメッシュ構造。つけていることを忘れるほどの軽やかさ。",
     icon: <Feather className="w-6 h-6" />
   },
   {
-    title: "発光するオーラ",
-    description: "光を乱反射するピグメントが、毛穴や色ムラを瞬時に飛ばし、透明感を演出。",
+    title: "光コントロール技術",
+    description: "肌の凹凸を光で飛ばし、厚塗り感なく毛穴や色ムラをカバー。自然なツヤと透明感を演出。",
     icon: <Sparkles className="w-6 h-6" />
   },
   {
-    title: "都市型プロテクション",
-    description: "ブルーライトや排気ガスなどの環境ストレスから、日中の肌を徹底ガード。",
+    title: "バリア機能サポート",
+    description: "乾燥や大気微粒子などの外的刺激から肌を守る。敏感に傾きがちな現代女性の肌を考えた設計。",
     icon: <Shield className="w-6 h-6" />
   }
 ];

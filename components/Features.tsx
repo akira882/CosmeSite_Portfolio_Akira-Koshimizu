@@ -9,9 +9,10 @@ const Features: React.FC = () => {
     <section id="science" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-20">
-          <h2 className="font-display text-3xl md:text-5xl text-brand-900 mb-6">The Science of Light</h2>
-          <div className="w-20 h-[1px] bg-brand-400 mx-auto"></div>
-          <p className="mt-6 text-brand-600 font-serif text-lg max-w-2xl mx-auto">
+          <span className="text-water-600 font-sans text-xs tracking-[0.2em] uppercase block mb-4">Key Technology</span>
+          <h2 className="font-serif text-3xl md:text-4xl text-brand-800 mb-6">美しさを支える、4つの機能</h2>
+          <div className="w-12 h-[2px] bg-water-200 mx-auto my-8"></div>
+          <p className="text-brand-600 font-sans text-base leading-loose max-w-2xl mx-auto">
             光の科学と植物の生命力。<br />
             86%のスキンケアベースが、あなたを輝かせる。
           </p>
@@ -19,20 +20,20 @@ const Features: React.FC = () => {
 
         <div
           ref={elementRef}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
         >
           {FEATURES.map((feature, index) => (
             <div
               key={feature.title}
-              className={`flex flex-col items-center text-center p-6 border border-brand-100 hover:border-brand-300 transition-all duration-700 bg-brand-50/50 hover:bg-white hover:shadow-lg ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              className={`flex flex-col items-center text-center p-8 border border-water-100 rounded-sm transition-all duration-700 bg-white hover:shadow-xl hover:shadow-water-100/50 hover:-translate-y-1 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                 }`}
               style={{ transitionDelay: `${index * 150}ms` }}
             >
-              <div className="mb-6 p-4 bg-white rounded-full text-brand-500 shadow-sm">
+              <div className="mb-6 p-4 bg-water-50 rounded-full text-water-600">
                 {feature.icon}
               </div>
-              <h3 className="font-serif text-xl text-brand-900 mb-3">{feature.title}</h3>
-              <p className="font-sans text-brand-600 text-sm leading-relaxed">
+              <h3 className="font-serif text-lg text-brand-800 mb-4">{feature.title}</h3>
+              <p className="font-sans text-brand-500 text-xs leading-relaxed">
                 {feature.description}
               </p>
             </div>
@@ -40,23 +41,27 @@ const Features: React.FC = () => {
         </div>
 
         {/* Ingredient Highlight */}
-        <div className="mt-24 flex flex-col md:flex-row items-center gap-12 bg-brand-900 text-brand-50 rounded-sm overflow-hidden shadow-2xl">
-          <div className="w-full md:w-1/2 h-80 md:h-[500px]">
+        <div className="mt-32 flex flex-col md:flex-row items-center gap-0 bg-water-50 rounded-sm overflow-hidden">
+          <div className="w-full md:w-1/2 h-80 md:h-[500px] relative group overflow-hidden">
             <img
-              src="/images/Concentrated-iris.jpg"
-              alt="Concentrated Iris Extract"
-              className="w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-700"
+              src="https://images.unsplash.com/photo-1532413992378-f169ac26fff0?q=80&w=2574&auto=format&fit=crop"
+              alt="Botanical Science"
+              className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
             />
           </div>
-          <div className="w-full md:w-1/2 p-10 md:p-16">
-            <span className="text-brand-300 font-sans uppercase tracking-widest text-xs mb-4 block">冬の肌を守る、奇跡の滴</span>
-            <h3 className="font-display text-3xl md:text-4xl mb-6 text-white">濃縮アイリス エキス</h3>
-            <p className="font-serif text-lg leading-relaxed text-brand-200 mb-8">
-              過酷な環境下でも美しく咲き誇るアイリス。その驚異的な生命力を凝縮したエキスが、冬の乾燥で低下しがちな肌のバリア機能を力強くサポートし、潤いの満ちた弾力肌へと導きます。
+          <div className="w-full md:w-1/2 p-12 md:p-20 flex flex-col justify-center">
+            <span className="text-water-600 font-sans uppercase tracking-widest text-xs mb-6 block">Botanical Science</span>
+            <h3 className="font-serif text-3xl md:text-4xl mb-8 text-brand-800">濃密ボタニカル保湿成分</h3>
+            <p className="font-sans text-base leading-8 text-brand-600 mb-10 text-justify">
+              過酷な環境下でも美しく咲き誇る植物の生命力と、最新の皮膚科学を融合。
+              肌のバリア機能をサポートし、乾燥した空気の中でも、
+              まるで泉のように潤い続ける肌へ。
             </p>
-            <button className="text-white border-b border-brand-400 pb-1 font-sans uppercase text-xs tracking-widest hover:text-brand-300 transition-colors">
-              成分の詳細を見る
-            </button>
+            <div>
+              <button className="text-brand-800 border-b border-brand-300 pb-1 font-sans uppercase text-xs tracking-widest hover:text-water-600 hover:border-water-600 transition-colors">
+                View Full Ingredients
+              </button>
+            </div>
           </div>
         </div>
       </div>
