@@ -49,11 +49,11 @@ const ProjectInsight: React.FC = () => {
             <div className="space-y-4 text-sm text-slate-600">
               <div>
                 <strong className="block text-slate-800 mb-1">Target Persona</strong>
-                <p>28歳 丸の内OL。美意識が高く、オフィスの乾燥による「夕方の劣化」に深刻な悩みを持つ。</p>
+                <p>30代後半〜60代。シミ・くすみ・乾燥など、複合的な大人の肌悩みを抱える層。高機能な保湿ケアを希求。</p>
               </div>
               <div>
                 <strong className="block text-slate-800 mb-1">Core Insight</strong>
-                <p>「隠す」ことへの罪悪感と、「肌に悪い」という懸念。これを払拭するため、機能訴求より先に「共感」と「信頼（スキンケア発想）」を配置。</p>
+                <p>「ケの美」の追求。ハレの日だけでなく、日常（ケ）の心地よさを重視。デモグラフィックだけでなく行動データに基づく精密なインサイト分析。</p>
               </div>
             </div>
           </InsightCard>
@@ -67,15 +67,15 @@ const ProjectInsight: React.FC = () => {
             <ul className="space-y-3 text-sm text-slate-600">
               <li className="flex gap-2">
                 <span className="font-bold text-amber-600 w-4">A</span>
-                <span>Attention: 没入感のあるFVで「世界観」を提示。</span>
+                <span>Attention: 権威性（POLA研究）と「ケの美」の世界観提示。</span>
               </li>
               <li className="flex gap-2">
                 <span className="font-bold text-amber-600 w-4">D</span>
-                <span>Desire: Problemセクションで「オフィスの悩み」に深く共感。</span>
+                <span>Desire: 複合的な悩みへの共感と、科学的解決策の提示。</span>
               </li>
               <li className="flex gap-2">
                 <span className="font-bold text-amber-600 w-4">B</span>
-                <span>Belief: Brand Storyを早期に配置し、機能への納得感を醸成。</span>
+                <span>Belief: 90年の研究実績と成分エビデンスによる信頼醸成。</span>
               </li>
               <li className="flex gap-2">
                 <span className="font-bold text-amber-600 w-4">A</span>
@@ -98,15 +98,12 @@ const ProjectInsight: React.FC = () => {
               <p className="text-xs text-slate-500">※一般的LP（1%）に対し、Beliefコンテンツの強化により高水準を目指す。</p>
 
               <div className="flex justify-between items-end border-b border-slate-200 pb-2">
-                <span>Micro CV</span>
-                <span className="font-bold text-emerald-600 text-lg">15%</span>
+                <span>LTV Strategy</span>
               </div>
-              <p className="text-xs text-slate-500">「成分へのこだわり」等の詳細閲覧率。</p>
-
-              <div>
-                <strong className="block text-slate-800 mb-1">LTV Strategy</strong>
-                <p>短期的な刈り取りではなく、ブランド哲学への共感を優先し、継続率を高める設計。</p>
-              </div>
+              <p className="text-xs text-slate-500">
+                セグメント別配信（LINE等）によるCPO節減とファン化の両立。<br />
+                アプリを中心としたデジタルとリアルのシームレスな融合（OMO）。
+              </p>
             </div>
           </InsightCard>
 
