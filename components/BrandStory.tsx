@@ -49,7 +49,7 @@ const BrandStory: React.FC = () => {
           >
             <div className="aspect-[4/5] overflow-hidden rounded-sm relative shadow-2xl shadow-water-100/50">
               <img
-                src="https://images.unsplash.com/photo-1608248597279-f99d160bfbc8?q=80&w=2670&auto=format&fit=crop"
+                src="/images/scientific_approach.png"
                 alt="Serum Texture"
                 className="w-full h-full object-cover"
               />
