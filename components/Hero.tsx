@@ -52,7 +52,6 @@ const Hero: React.FC = () => {
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-white/70">
-        <span className="font-sans text-[10px] tracking-widest uppercase mb-2 block text-center">Scroll</span>
         <div className="w-[1px] h-12 bg-white/50 mx-auto"></div>
       </div>
     </section>
