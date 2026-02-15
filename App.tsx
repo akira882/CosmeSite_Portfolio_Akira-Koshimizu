@@ -10,6 +10,7 @@ import Footer from './components/Footer';
 import StickyCTA from './components/StickyCTA';
 import LoadingScreen from './components/LoadingScreen';
 import Ritual from './components/Ritual';
+import ProjectInsight from './components/ProjectInsight';
 
 const App: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -61,6 +62,9 @@ const App: React.FC = () => {
 
           {/* B: Belief/Satisfaction - Social Proof */}
           <Reviews />
+
+          {/* Project Insight & Strategy (For Recruiters) */}
+          <ProjectInsight />
         </main>
 
         <Footer />
