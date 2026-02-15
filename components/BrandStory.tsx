@@ -22,8 +22,10 @@ const BrandStory: React.FC = () => {
               Scientific Approach
             </span>
             <h2 className="font-serif text-3xl md:text-4xl text-brand-800 leading-tight mb-8">
-              メイクするほど、素肌が潤う。<br />
-              その「矛盾」を、科学する。
+              <span className="inline-block whitespace-nowrap">メイクするほど、</span>
+              <span className="inline-block whitespace-nowrap">素肌が潤う。</span><br />
+              <span className="inline-block whitespace-nowrap">その「矛盾」を、</span>
+              <span className="inline-block whitespace-nowrap">科学する。</span>
             </h2>
             <div className="space-y-8 text-brand-600 font-sans leading-loose text-justify">
               <p>
