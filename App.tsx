@@ -11,6 +11,8 @@ import StickyCTA from './components/StickyCTA';
 import LoadingScreen from './components/LoadingScreen';
 import Ritual from './components/Ritual';
 import ProjectInsight from './components/ProjectInsight';
+import DesignProcess from './components/DesignProcess';
+import OrbisUXProposal from './components/OrbisUXProposal';
 
 const App: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -63,7 +65,14 @@ const App: React.FC = () => {
           {/* B: Belief/Satisfaction - Social Proof */}
           <Reviews />
 
-          {/* Project Insight & Strategy (For Recruiters) */}
+          {/* --- New Sections for Portfolio --- */}
+          {/* Design Process / Rationale */}
+          <DesignProcess />
+
+          {/* UX Improvement Proposal */}
+          <OrbisUXProposal />
+
+          {/* Project Insight & Strategy (For Recruiters - Keep as legacy or remove if redundant, keeping for now) */}
           <ProjectInsight />
         </main>
 

@@ -29,7 +29,7 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mb-6 md:mb-8"
           >
-            <span className="inline-block px-3 py-1 bg-white/80 backdrop-blur border border-slate-200 rounded-full text-slate-500 font-sans text-[10px] md:text-xs tracking-[0.2em] uppercase shadow-sm">
+            <span className="inline-block px-3 py-1 bg-white/60 backdrop-blur-md border border-slate-200/50 rounded-full text-slate-600 font-sans text-[10px] md:text-xs tracking-[0.2em] uppercase shadow-sm">
               New Arrival
             </span>
           </motion.div>
@@ -41,11 +41,13 @@ const Hero: React.FC = () => {
               transition={{ duration: 1, delay: 0.4 }}
               className="font-display font-medium text-3xl md:text-5xl lg:text-6xl tracking-wide leading-relaxed drop-shadow-sm text-brand-900"
             >
-              <span className="block text-2xl md:text-3xl lg:text-4xl mb-2 md:mb-4 text-brand-500">
+              <span className="block text-2xl md:text-3xl lg:text-4xl mb-2 md:mb-4 text-brand-500 font-light">
                 なんとなく不調が続く肌へ。
               </span>
-              もっとうるおって、<br />
-              ずーっと<span className="text-brand-400">ゆらがない肌</span>へ。
+              <span className="bg-white/40 backdrop-blur-sm rounded-lg px-2 decoration-clone box-decoration-slice">
+                もっとうるおって、<br />
+                ずーっと<span className="text-brand-400 font-semibold">ゆらがない肌</span>へ。
+              </span>
             </motion.div>
           </h1>
 
@@ -53,11 +55,11 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
-            className="font-sans text-slate-600 text-sm md:text-base leading-8 tracking-wider mb-8 max-w-lg mx-auto md:mx-0"
+            className="font-sans text-slate-700 text-sm md:text-base leading-8 tracking-wider mb-8 max-w-lg mx-auto md:mx-0 p-4 bg-white/30 backdrop-blur-sm rounded-xl border border-white/40 shadow-sm"
           >
             肌の基礎体力に着目。<br />
             ３ステップで、ハリツヤ続く肌に。<br />
-            <span className="text-xs text-slate-400 block mt-2">*1 肌のバリア機能を保つこと</span>
+            <span className="text-xs text-slate-500 block mt-2">*1 肌のバリア機能を保つこと</span>
           </motion.p>
 
           <motion.div

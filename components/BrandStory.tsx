@@ -30,12 +30,28 @@ const BrandStory: React.FC = () => {
                 目指したのは、ファンデーションでありながら、<br />
                 高機能なスキンケアでもあるという新しい存在。
               </p>
-              <p>
-                100回以上の試作を経て辿り着いた<br />
-                <span className="font-bold text-brand-800 border-b-2 border-water-200">「モイスチャーマグネット処方」</span>が、<br />
-                空気中の水分さえも味方につけ、<br />
-                一日中、満ち足りた肌へ導きます。
-              </p>
+              <div>
+                <p className="mb-6">
+                  100回以上の試作を経て辿り着いた<br />
+                  <span className="font-bold text-brand-800 border-b-2 border-water-200">「モイスチャーマグネット処方」</span>が、<br />
+                  空気中の水分さえも味方につけ、<br />
+                  一日中、満ち足りた肌へ導きます。
+                </p>
+
+                {/* Data Visualization Grouped with Text */}
+                <div className="bg-water-50/50 p-6 rounded-lg border border-water-100 flex items-center gap-6">
+                  <div className="flex-1">
+                    <p className="font-sans text-xs text-brand-500 uppercase tracking-wider mb-1">Essence Ratio</p>
+                    <p className="text-[10px] text-brand-400 leading-tight">
+                      ※精製水を含む美容液成分の配合比率
+                    </p>
+                  </div>
+                  <div className="flex items-baseline border-l border-water-200 pl-6">
+                    <span className="font-display text-5xl md:text-6xl text-water-600 tracking-tighter font-bold">86</span>
+                    <span className="text-xl text-water-500 ml-1">%</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </motion.div>
 
@@ -54,18 +70,6 @@ const BrandStory: React.FC = () => {
                 className="w-full h-full object-cover"
               />
               {/* No dark overlay, just pure texture */}
-            </div>
-
-            {/* Scientific Badge */}
-            <div className="absolute -bottom-10 -left-10 bg-white/95 backdrop-blur p-8 shadow-xl border border-water-100 max-w-[240px] rounded-sm">
-              <p className="font-sans text-xs text-brand-500 uppercase tracking-wider mb-2">Essence Ratio</p>
-              <div className="flex items-baseline">
-                <span className="font-display text-6xl text-water-600 tracking-tighter">86</span>
-                <span className="text-2xl text-water-500 ml-1">%</span>
-              </div>
-              <p className="text-[10px] text-brand-400 mt-2 leading-tight">
-                ※精製水を含む美容液成分の配合比率
-              </p>
             </div>
           </motion.div>
         </div>
