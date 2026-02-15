@@ -22,14 +22,13 @@ const Navigation: React.FC = () => {
   ];
 
   return (
-    <nav 
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/95 backdrop-blur-md shadow-sm py-4' : 'bg-transparent py-6'
-      }`}
+    <nav
+      className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-sm py-4' : 'bg-transparent py-6'
+        }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         {/* Mobile Menu Button */}
-        <button 
+        <button
           className={`md:hidden ${isScrolled ? 'text-brand-900' : 'text-white'}`}
           onClick={() => setIsMobileMenuOpen(true)}
         >
@@ -46,8 +45,8 @@ const Navigation: React.FC = () => {
         {/* Desktop Links */}
         <div className={`hidden md:flex space-x-12 ${isScrolled ? 'text-brand-800' : 'text-white'}`}>
           {navLinks.map((item) => (
-            <a 
-              key={item.name} 
+            <a
+              key={item.name}
               href={item.href}
               className="font-sans text-sm tracking-widest uppercase hover:opacity-70 transition-opacity font-medium"
             >
@@ -63,7 +62,6 @@ const Navigation: React.FC = () => {
           </button>
           <button className="relative">
             <ShoppingBag className="w-5 h-5" />
-            <span className="absolute -top-1 -right-1 w-2 h-2 bg-red-500 rounded-full"></span>
           </button>
         </div>
       </div>
@@ -71,15 +69,15 @@ const Navigation: React.FC = () => {
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
         <div className="fixed inset-0 bg-white z-[60] p-6 flex flex-col items-center justify-center space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-300">
-          <button 
+          <button
             className="absolute top-6 left-6 text-brand-900"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             <X className="w-8 h-8" />
           </button>
           {navLinks.map((item) => (
-            <a 
-              key={item.name} 
+            <a
+              key={item.name}
               href={item.href}
               onClick={() => setIsMobileMenuOpen(false)}
               className="font-serif text-xl text-brand-900 tracking-wider"
