@@ -24,7 +24,7 @@ const Features: React.FC = () => {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
         >
           {FEATURES.map((feature, index) => {
-            const enTitles = ["01 Moisture", "02 Texture", "03 Light", "04 Barrier"];
+            const enTitles = ["01 MOISTURE", "02 TEXTURE", "03 LIGHT", "04 BARRIER"];
             return (
               <div
                 key={feature.title}
@@ -32,12 +32,14 @@ const Features: React.FC = () => {
                   }`}
                 style={{ transitionDelay: `${index * 150}ms` }}
               >
-                <div className="mb-6">
-                  <span className="font-display text-4xl text-water-100 font-light">{index + 1}</span>
-                  <span className="block text-[10px] text-brand-300 tracking-[0.3em] uppercase mt-2">{enTitles[index].split(' ')[1]}</span>
+                <div className="mb-8 flex flex-col items-center w-full">
+                  <div className="flex items-baseline gap-3 mb-3 border-b border-water-100 pb-2 px-4">
+                    <span className="font-display text-4xl text-water-600 font-medium leading-none">0{index + 1}</span>
+                    <span className="font-serif text-lg text-brand-800 tracking-[0.2em] font-medium">{enTitles[index].split(' ')[1]}</span>
+                  </div>
                 </div>
                 <h3 className="font-serif text-lg text-brand-800 mb-4">{feature.title}</h3>
-                <p className="font-sans text-brand-500 text-xs leading-loose text-justify">
+                <p className="font-sans text-brand-600 text-sm leading-8 text-justify">
                   {feature.description}
                 </p>
               </div>
