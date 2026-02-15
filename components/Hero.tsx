@@ -95,10 +95,10 @@ const Hero: React.FC = () => {
               className="w-full h-auto drop-shadow-2xl object-contain hover:scale-105 transition-transform duration-700 ease-out"
             />
 
-            <div className="absolute top-6 -right-8 md:-right-16 w-36 h-36 bg-white rounded-full shadow-xl shadow-water-100/20 flex flex-col items-center justify-center border border-water-200 animate-float-slow z-20">
-              <div className="relative z-10 flex flex-col items-center justify-center translate-y-[2px]">
-                <span className="text-[0.85rem] text-brand-900 font-bold tracking-widest mb-1">美容液成分</span>
-                <div className="flex items-baseline justify-center text-brand-900 leading-none">
+            <div className="absolute top-6 -right-8 md:-right-16 w-36 h-36 bg-white rounded-full shadow-xl shadow-water-100/20 flex flex-col items-center justify-center border border-water-200 animate-float-slow z-20 pb-1">
+              <div className="relative z-10 flex flex-col items-center justify-center">
+                <span className="text-[0.85rem] text-brand-900 font-bold tracking-widest leading-none">美容液成分</span>
+                <div className="flex items-baseline justify-center text-brand-900 leading-none -mt-1">
                   <span className="font-display text-[4rem] font-medium tracking-tighter">86</span>
                   <span className="font-display text-2xl font-light ml-0.5 -translate-y-1">%</span>
                 </div>
