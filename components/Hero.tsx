@@ -19,11 +19,11 @@ const Hero: React.FC = () => {
         className="absolute inset-0 z-0"
       >
         <img
-          src="https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?q=80&w=2574&auto=format&fit=crop"
-          alt="Model with radiant skin"
-          className="w-full h-full object-cover object-center filter brightness-[0.85]"
+          src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?q=80&w=2670&auto=format&fit=crop"
+          alt="Natural beauty with radiant skin"
+          className="w-full h-full object-cover object-center filter brightness-95"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/40"></div>
       </motion.div>
 
       {/* Content */}
