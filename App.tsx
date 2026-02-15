@@ -35,14 +35,18 @@ const App: React.FC = () => {
           <Features />
 
           {/* Emotional Bridge / Brand Story Image */}
-          <div className="h-[400px] md:h-[600px] bg-fixed bg-center bg-cover relative"
-            style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1596462502278-27bfdd403348?q=80&w=2574&auto=format&fit=crop")' }}>
-            <div className="absolute inset-0 bg-brand-900/40 flex items-center justify-center">
-              <div className="bg-white/10 backdrop-blur-md p-10 md:p-16 border border-white/20 max-w-lg mx-4 text-center shadow-2xl">
-                <h3 className="text-white font-serif text-2xl md:text-3xl mb-6 tracking-wide drop-shadow-md">
+          {/* Emotional Bridge / Brand Story Image */}
+          <div className="h-[400px] md:h-[600px] bg-fixed bg-center bg-cover relative bg-brand-900"
+            style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1618331835717-801e976710b2?q=80&w=2574&auto=format&fit=crop")' }}>
+            <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+              <div className="bg-brand-900/70 backdrop-blur-md p-10 md:p-16 border border-white/10 max-w-lg mx-4 text-center shadow-2xl relative overflow-hidden group">
+                {/* Subtle shine effect */}
+                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-tr from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+
+                <h3 className="text-white font-serif text-2xl md:text-3xl mb-8 tracking-wide drop-shadow-lg leading-relaxed">
                   その輝きは、<br />自信へと変わる。
                 </h3>
-                <button className="text-white font-sans uppercase text-xs tracking-widest border-b border-white pb-1 hover:text-brand-100 transition-colors hover:border-brand-100">
+                <button className="text-white/90 font-sans uppercase text-xs tracking-widest border-b border-white/50 pb-1 hover:text-white hover:border-white transition-all duration-300">
                   サステナビリティへの取り組み
                 </button>
               </div>
