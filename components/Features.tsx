@@ -23,22 +23,26 @@ const Features: React.FC = () => {
           ref={elementRef}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
         >
-          {FEATURES.map((feature, index) => (
-            <div
-              key={feature.title}
-              className={`flex flex-col items-center text-center p-8 border border-water-100 rounded-sm transition-all duration-700 bg-white hover:shadow-xl hover:shadow-water-100/50 hover:-translate-y-1 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                }`}
-              style={{ transitionDelay: `${index * 150}ms` }}
-            >
-              <div className="mb-6 p-4 bg-water-50 rounded-full text-water-600">
-                {feature.icon}
+          {FEATURES.map((feature, index) => {
+            const enTitles = ["01 Moisture", "02 Texture", "03 Light", "04 Barrier"];
+            return (
+              <div
+                key={feature.title}
+                className={`flex flex-col items-center text-center p-10 border border-water-100/50 rounded-sm transition-all duration-700 bg-white hover:shadow-2xl hover:shadow-water-100/20 hover:-translate-y-1 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                  }`}
+                style={{ transitionDelay: `${index * 150}ms` }}
+              >
+                <div className="mb-6">
+                  <span className="font-display text-4xl text-water-100 font-light">{index + 1}</span>
+                  <span className="block text-[10px] text-brand-300 tracking-[0.3em] uppercase mt-2">{enTitles[index].split(' ')[1]}</span>
+                </div>
+                <h3 className="font-serif text-lg text-brand-800 mb-4">{feature.title}</h3>
+                <p className="font-sans text-brand-500 text-xs leading-loose text-justify">
+                  {feature.description}
+                </p>
               </div>
-              <h3 className="font-serif text-lg text-brand-800 mb-4">{feature.title}</h3>
-              <p className="font-sans text-brand-500 text-xs leading-relaxed">
-                {feature.description}
-              </p>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* Ingredient Highlight */}
