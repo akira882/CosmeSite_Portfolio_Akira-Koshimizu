@@ -96,10 +96,17 @@ const Hero: React.FC = () => {
             />
 
             {/* Floating Badge (Similar to reference 'Review No.1' etc) */}
-            <div className="absolute top-10 -right-4 md:-right-10 w-28 h-28 bg-white/90 backdrop-blur-md rounded-full shadow-lg flex flex-col items-center justify-center border border-water-100 p-2 animate-float-slow">
-              <span className="text-[11px] text-brand-500 font-bold tracking-tight">美容液成分</span>
-              <span className="text-3xl font-display text-water-600 font-bold leading-none mt-1">86<span className="text-sm">%</span></span>
-              <span className="text-[10px] text-slate-400 mt-1 center text-center tracking-widest">高保湿</span>
+            <div className="absolute top-8 -right-6 md:-right-12 w-32 h-32 bg-white rounded-full shadow-2xl shadow-water-200/40 flex flex-col items-center justify-center border-4 border-white ring-1 ring-water-50 animate-float-slow p-2 z-20">
+              <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-white to-water-50/30 opacity-50"></div>
+              <div className="relative z-10 flex flex-col items-center">
+                <span className="text-[10px] text-brand-600 font-bold tracking-wider mb-1">美容液成分</span>
+                <div className="flex items-baseline justify-center text-water-600 leading-none">
+                  <span className="font-display text-[3.5rem] font-medium tracking-tighter">86</span>
+                  <span className="font-sans text-lg font-light ml-0.5 -translate-y-1">%</span>
+                </div>
+                <div className="w-8 h-[1px] bg-water-200 my-1.5"></div>
+                <span className="text-[10px] text-brand-500 tracking-[0.2em] font-medium text-center">高保湿</span>
+              </div>
             </div>
           </motion.div>
         </motion.div>
