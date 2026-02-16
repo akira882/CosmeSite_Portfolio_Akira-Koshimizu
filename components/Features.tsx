@@ -64,10 +64,28 @@ const Features: React.FC = () => {
               肌のバリア機能をサポートし、乾燥した空気の中でも、
               まるで泉のように潤い続ける肌へ。
             </p>
-            <div>
-              <button className="text-brand-800 border-b border-brand-300 pb-1 font-sans uppercase text-xs tracking-widest hover:text-water-600 hover:border-water-600 transition-colors">
-                View Full Ingredients
-              </button>
+            <div className="mt-8 border-t border-water-200 pt-6">
+              <p className="text-xs text-brand-400 font-sans tracking-widest uppercase mb-3">Safety Promises</p>
+              <ul className="text-[10px] md:text-xs text-brand-600 font-sans space-y-2">
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-water-400 rounded-full"></span>
+                  無油分、無香料、無着色
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-water-400 rounded-full"></span>
+                  アルコールフリー
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-water-400 rounded-full"></span>
+                  アレルギーテスト済
+                  <span className="text-brand-300 text-[9px] ml-1">(全ての方にアレルギーが起こらないということではありません)</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-water-400 rounded-full"></span>
+                  ノンコメドジェニックテスト済
+                  <span className="text-brand-300 text-[9px] ml-1">(ニキビのもとができにくい処方)</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
