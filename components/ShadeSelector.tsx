@@ -79,8 +79,8 @@ const ShadeSelector: React.FC = () => {
               <button className="w-full bg-brand-800 text-white py-4 rounded-sm hover:bg-brand-700 transition-colors duration-300 font-sans tracking-widest text-sm">
                 無料サンプルを試す
               </button>
-              <p className="text-center text-xs text-brand-400 font-sans">
-                <span className="inline-block border-b border-brand-200 pb-0.5">※お一人様1回限り・全色お届け</span>
+              <p className="text-center text-xs text-brand-800 font-bold font-sans">
+                <span className="inline-block border-b border-brand-300 pb-0.5">※お一人様1回限り・全色お届け</span>
               </p>
               <button className="px-6 py-4 border border-brand-200 text-brand-900 font-sans uppercase tracking-widest text-sm hover:border-brand-900 transition-colors">
                 バーチャル試着
