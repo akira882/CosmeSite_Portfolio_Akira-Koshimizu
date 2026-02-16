@@ -10,7 +10,7 @@ const Features: React.FC = () => {
     <section id="science" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-20">
-          <span className="text-water-600 font-sans text-xs tracking-[0.2em] uppercase block mb-4">Key Technology</span>
+          <span className="text-water-600 font-sans text-xs tracking-[0.2em] uppercase block mb-4">Scientific Features</span>
           <h2 className="font-serif text-3xl md:text-4xl text-brand-800 mb-6">美しさを支える、4つの機能</h2>
           <div className="w-12 h-[2px] bg-water-200 mx-auto my-8"></div>
           <p className="text-brand-600 font-sans text-base leading-loose max-w-2xl mx-auto">
