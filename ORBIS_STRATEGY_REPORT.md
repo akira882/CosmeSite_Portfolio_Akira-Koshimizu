@@ -39,15 +39,24 @@
 
 ## 3. Structural Logic (構成のロジック)
 
-このLPは、ターゲットの心理変容プロセスに合わせて、**行動経済学**と**PASONAの法則**を緻密に組み込んでいます。
+### 3-1. Strategic Pivot: Why PASONA over AIDABABA?
+既存の多くの化粧品LPでは、**AIDABABAの法則**（ActionとBeliefを繰り返し、衝動買いを誘うダイレクトレスポンス型）が採用されています。
+しかし、本プロジェクトのターゲット「**理性派（Rational Early-Aging）**」において、AIDABABAは以下の理由で逆効果となります。
 
-| Section | Strategic Intent (狙い) | Framework / Logic |
-| :--- | :--- | :--- |
-| **Hero** | **Authority (権威付け)**<br>ミニマルな縦書きとバッジで「安売りしない姿勢」を提示。 | **Attention (AISAS)**<br>Contrast Effect (対比効果) |
-| **Problem** | **Empathy (共感)**<br>「乾燥」ではなく「不調」という言葉で、広範な悩みをフックする。 | **Problem (PASONA)**<br>Proactive Coping (能動的対処) |
-| **Features** | **Rationalization (正当化)**<br>購入という感情的な決断に対し、論理的な裏付けを与える。 | **Search (AISAS)**<br>Social Proof (社会的証明) |
-| **Comparison** | **Decision Making (意思決定)**<br>「他とは違う」ことを一目で理解させ、迷いを断つ。 | **Narrowing (PASONA)**<br>Distinction Bias (区別バイアス) |
-| **CTA** | **Risk Reversal (リスク排除)**<br>「無料」にすることで、試さない理由をなくす。 | **Action (AISAS)**<br>Loss Aversion (損失回避) |
+*   **Risk**: 「売り込みがしつこい」と感じさせ、ブランド毀損（Brand Damage）を招く。
+*   **Pivot**: 彼女たちに必要なのは「説得」ではなく「納得」です。そのため、問題解決型のフレームワークである **PASONAの法則** を採用しました。
+
+### 3-2. Detailed PASONA Mapping (PASONAの実装詳細)
+各セクションがPASONAのどの役割を担っているか、その意図を解説します。
+
+| Phasa | Role | Section | Rationale (狙い) |
+| :--- | :--- | :--- | :--- |
+| **P** | **Problem**<br>(問題提起) | **Problem Section**<br>("なんとなく不調...") | 理想状態（キラキラした肌）を見せるのではなく、現在の**「負（悩み）」にフォーカス**し、「これは私のことだ」と認識させる。 |
+| **A** | **Affinity**<br>(親近感・共感) | **Brand Story**<br>(Design Process) | 「嘘をつかない」「誠実である」という姿勢をデザインプロセスとして開示。企業対消費者ではなく、**人対人の信頼関係**を築く。 |
+| **S** | **Solution**<br>(解決策) | **Scientific Features**<br>**Comparison** | 感情論ではなく、**「86%の成分」「競合優位性（Comparison）」**という客観的事実提示により、論理的な解決策として提示。 |
+| **O** | **Offer**<br>(提案) | **Shade Selector**<br>(Free Sample) | いきなりの購入（Buy）ではなく、**「無料で試す権利」**をオファー。理性派が最も恐れる「失敗」のリスクをゼロにする。 |
+| **N** | **Narrowing**<br>(絞り込み) | **Micro-Copy**<br>("一人一回限り") | 「誰でも良い」わけではなく、「本気で肌を変えたいあなただけ」という限定性で、**今すぐ申し込む理由（緊急性）**を作る。 |
+| **A** | **Action**<br>(行動) | **Sticky CTA** | 思考を中断させない追従ボタンで、決断の瞬間にアクションできる導線を確保。 |
 
 ---
 
