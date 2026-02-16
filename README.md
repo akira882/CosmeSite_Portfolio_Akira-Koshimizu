@@ -27,6 +27,13 @@
 
 ---
 
+> [!IMPORTANT]
+> **For Recruiters & Hiring Managers:**
+> Please refer to **[ORBIS_STRATEGY_REPORT.md](ORBIS_STRATEGY_REPORT.md)** for a detailed breakdown of the **Marketing Strategy, Persona Analysis (Mariko Sato), and Logical Design Decisions** behind this project.
+> このプロジェクトの核心である「戦略ロジック」と「ペルソナ分析」の詳細は、上記レポートにまとめています。
+
+---
+
 ## 2. Marketing Strategy
 
 ### 🎯 Core Persona: "The Rational Early-Aging" (理性派・堅実層)

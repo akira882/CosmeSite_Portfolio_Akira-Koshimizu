@@ -9,7 +9,7 @@ const StrategicBreakdown: React.FC = () => {
   const aisasSteps = [
     { label: "Attention", desc: "Hero: Hydro-Prism Visual", icon: <Target className="w-5 h-5" /> },
     { label: "Interest", desc: "Problem: 30s Skin Concerns", icon: <BrainCircuit className="w-5 h-5" /> },
-    { label: "Search", desc: "Scientific Features & Comparison", icon: <Search className="w-5 h-5" />, highlight: true },
+    { label: "Search", desc: "Scientific Features (Safety) & Comparison", icon: <Search className="w-5 h-5" />, highlight: true },
     { label: "Action", desc: "CTA: Free Sample Offer", icon: <MousePointerClick className="w-5 h-5" /> },
     { label: "Share", desc: "Reviews: Social Proof", icon: <MessageCircle className="w-5 h-5" /> },
   ];
