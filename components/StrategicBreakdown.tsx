@@ -32,7 +32,7 @@ const StrategicBreakdown: React.FC = () => {
           <h2 className="font-display text-3xl md:text-4xl text-white mb-4">
             Strategic Architecture
           </h2>
-          <p className="text-slate-400 max-w-2xl mx-auto text-sm leading-relaxed">
+          <p className="text-slate-300 max-w-2xl mx-auto text-sm leading-relaxed">
             本サイトは、単なるデザインではなく、<br className="md:hidden" />心理学とマーケティングフレームワークに基づいて構成されています。<br />
             「なぜ売れるのか」のロジックを可視化しました。
           </p>
@@ -50,13 +50,13 @@ const StrategicBreakdown: React.FC = () => {
               <BarChart3 className="text-indigo-400 w-6 h-6" />
               <h3 className="text-xl text-white font-medium">AISAS Model Optimization</h3>
             </div>
-            <p className="text-sm text-slate-400 mb-8 leading-relaxed">
+            <p className="text-sm text-slate-300 mb-8 leading-relaxed">
               「理性派」ターゲットの最大の特徴は、徹底的な<strong>Search（検索・比較）</strong>です。<br />
               本サイトでは、通常なら外部サイトで行われる成分確認や競合比較（Search）を、詳細な「Scientific Features」セクションで先回りして完結させ、離脱を防いでいます。
             </p>
 
             <div className="space-y-4">
-              <div className="flex items-center justify-between text-xs font-mono text-slate-500 mb-2 px-2">
+              <div className="flex items-center justify-between text-xs font-mono text-slate-400 mb-2 px-2">
                 <span>User Flow</span>
                 <span>Site Section</span>
               </div>
@@ -70,8 +70,8 @@ const StrategicBreakdown: React.FC = () => {
                       {step.icon}
                     </div>
                     <div className="flex-1">
-                      <div className={`text-xs font-bold tracking-wider uppercase ${step.highlight ? 'text-indigo-300' : 'text-slate-400'}`}>{step.label}</div>
-                      <div className={`text-sm ${step.highlight ? 'text-white' : 'text-slate-300'}`}>{step.desc}</div>
+                      <div className={`text-xs font-bold tracking-wider uppercase ${step.highlight ? 'text-indigo-300' : 'text-slate-300'}`}>{step.label}</div>
+                      <div className={`text-sm ${step.highlight ? 'text-white' : 'text-slate-200'}`}>{step.desc}</div>
                     </div>
                     {step.highlight && (
                       <span className="text-[10px] bg-indigo-500 text-white px-2 py-0.5 rounded-full absolute right-3 top-3">Key Strategy</span>
@@ -92,7 +92,7 @@ const StrategicBreakdown: React.FC = () => {
               <BrainCircuit className="text-emerald-400 w-6 h-6" />
               <h3 className="text-xl text-white font-medium">PASONA Law Implementation</h3>
             </div>
-            <p className="text-sm text-slate-400 mb-8 leading-relaxed">
+            <p className="text-sm text-slate-300 mb-8 leading-relaxed">
               セールスライティングの鉄則「PASONA」をUI構造に落とし込み、<br />
               ユーザーの心理状態に合わせて情報を提示しています。
             </p>
@@ -103,8 +103,8 @@ const StrategicBreakdown: React.FC = () => {
                   <div className="text-emerald-400 font-mono text-lg font-bold">P</div>
                   <div>
                     <h4 className="text-white text-sm font-bold mb-1">Problem (問題提起)</h4>
-                    <p className="text-xs text-slate-400">Section: <strong>Problem Areas</strong></p>
-                    <p className="text-xs text-slate-500 mt-2">"なんとなく不調..." というターゲットの潜在的な悩みを言語化し、共感を呼ぶ。</p>
+                    <p className="text-xs text-slate-300">Section: <strong>Problem Areas</strong></p>
+                    <p className="text-xs text-slate-400 mt-2">"なんとなく不調..." というターゲットの潜在的な悩みを言語化し、共感を呼ぶ。</p>
                   </div>
                 </div>
               </div>
@@ -114,8 +114,8 @@ const StrategicBreakdown: React.FC = () => {
                   <div className="text-emerald-400 font-mono text-lg font-bold">S</div>
                   <div>
                     <h4 className="text-white text-sm font-bold mb-1">Solution (解決策)</h4>
-                    <p className="text-xs text-slate-400">Section: <strong>Brand Story & Features</strong></p>
-                    <p className="text-xs text-slate-500 mt-2">"86% Essence" と "Scientific Proof" で、論理的な解決策を提示。</p>
+                    <p className="text-xs text-slate-300">Section: <strong>Brand Story & Features</strong></p>
+                    <p className="text-xs text-slate-400 mt-2">"86% Essence" と "Scientific Proof" で、論理的な解決策を提示。</p>
                   </div>
                 </div>
               </div>
@@ -125,8 +125,8 @@ const StrategicBreakdown: React.FC = () => {
                   <div className="text-emerald-400 font-mono text-lg font-bold">O</div>
                   <div>
                     <h4 className="text-white text-sm font-bold mb-1">Offer (提案)</h4>
-                    <p className="text-xs text-slate-400">Section: <strong>Shade Selector / CTA</strong></p>
-                    <p className="text-xs text-slate-500 mt-2">"無料サンプル" というリスクのないオファーで、行動のハードルを極限まで下げる。</p>
+                    <p className="text-xs text-slate-300">Section: <strong>Shade Selector / CTA</strong></p>
+                    <p className="text-xs text-slate-400 mt-2">"無料サンプル" というリスクのないオファーで、行動のハードルを極限まで下げる。</p>
                   </div>
                 </div>
               </div>
