@@ -1,31 +1,5 @@
-import React, { useRef, useEffect, useState } from 'react';
-import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
-
-const Particle = ({ delay, size, x, y }: { delay: number; size: number; x: number; y: number }) => (
-  <motion.div
-    initial={{ opacity: 0, scale: 0, x, y }}
-    animate={{
-      opacity: [0, 0.6, 0],
-      scale: [0, 1, 0.5],
-      y: y - 100, // Float up
-      x: x + (Math.random() * 20 - 10) // Slight drift
-    }}
-    transition={{
-      duration: 3 + Math.random() * 2,
-      delay,
-      repeat: Infinity,
-      ease: "easeInOut"
-    }}
-    className="absolute rounded-full bg-gradient-to-tr from-white to-water-200 pointer-events-none mix-blend-screen overflow-hidden"
-    style={{
-      width: size,
-      height: size,
-      boxShadow: "0 0 10px rgba(186, 230, 253, 0.4)"
-    }}
-  >
-    <div className="absolute top-[20%] left-[20%] w-[30%] h-[30%] bg-white rounded-full blur-[1px]"></div>
-  </motion.div>
-);
+import React, { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 const Hero: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -34,130 +8,104 @@ const Hero: React.FC = () => {
     offset: ["start start", "end start"]
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
-  // Generate particles
-  const [particles, setParticles] = useState<Array<{ id: number, size: number, x: number, y: number, delay: number }>>([]);
-
-  useEffect(() => {
-    const newParticles = Array.from({ length: 15 }).map((_, i) => ({
-      id: i,
-      size: Math.random() * 20 + 5, // 5px to 25px
-      x: (Math.random() - 0.5) * 400, // Spread nicely
-      y: (Math.random() - 0.5) * 400,
-      delay: Math.random() * 5
-    }));
-    setParticles(newParticles);
-  }, []);
-
   return (
-    <section ref={containerRef} className="relative h-screen min-h-[800px] w-full overflow-hidden bg-[#F5F8FA]">
-      {/* Background Decorative Elements (Subtle water/light feel) - Aurora effect */}
+    <section ref={containerRef} className="relative h-screen min-h-[800px] w-full overflow-hidden bg-gradient-to-b from-white via-[#F5F8FA] to-[#E8F0F5]">
+      {/* Background Decorative Elements (Subtle water/light feel) */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-[10%] left-[20%] w-[600px] h-[600px] bg-pink-50/60 rounded-full blur-[120px] mix-blend-multiply animate-pulse-slow"></div>
-        <div className="absolute bottom-[20%] right-[10%] w-[700px] h-[700px] bg-blue-50/50 rounded-full blur-[130px] mix-blend-multiply animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
-        {/* God Ray light effect */}
-        <div className="absolute -top-[20%] right-[20%] w-[2px] h-[150%] bg-gradient-to-b from-white/0 via-white/20 to-white/0 rotate-[25deg] blur-md"></div>
-        <div className="absolute -top-[20%] right-[30%] w-[100px] h-[150%] bg-gradient-to-b from-white/0 via-white/5 to-white/0 rotate-[25deg] blur-3xl"></div>
+        <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-pink-50/40 rounded-full blur-[100px] mix-blend-multiply"></div>
+        <div className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-blue-50/40 rounded-full blur-[120px] mix-blend-multiply"></div>
       </div>
 
-      <div className="relative z-10 h-full w-full flex items-center justify-center px-4 md:px-8">
+      <div className="relative z-10 h-full max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center px-4 md:px-8 pt-20 pb-10">
 
-        {/* Center Stage: Hydro-Prism Sphere & Product */}
-        <div className="relative flex items-center justify-center w-full max-w-6xl">
-
-          {/* The Sphere (Water Halo) */}
+        {/* Text Content - Mobile: Top, Desktop: Left */}
+        <div className="flex-1 text-center md:text-left md:pr-10 z-20 order-1 md:order-1 mt-10 md:mt-0">
           <motion.div
-            style={{ y, opacity }}
-            className="relative z-10 flex items-center justify-center"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="mb-6 md:mb-8"
           >
-            {/* Sphere Container */}
-            <div className="relative w-[350px] h-[350px] md:w-[600px] md:h-[600px] flex items-center justify-center">
-
-              {/* The actual fluid sphere visual */}
-              <motion.div
-                animate={{ scale: [1, 1.02, 1] }}
-                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute inset-0 w-full h-full rounded-full border border-white/40 bg-gradient-to-br from-white/10 to-water-100/10 backdrop-blur-[2px] shadow-[0_0_60px_rgba(186,230,253,0.2),inset_0_0_40px_rgba(255,255,255,0.5)]"
-              ></motion.div>
-
-              {/* Inner shine */}
-              <div className="absolute inset-4 rounded-full border border-white/20 opacity-50"></div>
-
-              {/* Dynamic Particles */}
-              {particles.map(p => (
-                <Particle key={p.id} {...p} />
-              ))}
-
-              {/* Product Image */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1.2, delay: 0.2, type: "spring", stiffness: 40 }}
-                className="relative z-20 w-[160px] md:w-[260px]"
-              >
-                <img
-                  src="/images/fictional-foundation.png"
-                  alt="Fictional Foundation Product"
-                  className="w-full h-full object-contain drop-shadow-2xl"
-                />
-              </motion.div>
-
-              {/* Floating Badge (World Class Quality) - Positioned relative to sphere */}
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.8, duration: 0.8 }}
-                className="absolute -top-0 -right-4 md:top-20 md:right-10 w-36 h-36 bg-white rounded-full shadow-xl shadow-water-100/20 flex flex-col items-center justify-center border border-water-200 animate-float-slow z-30 pb-1"
-              >
-                <div className="relative z-10 flex flex-col items-center justify-center">
-                  <span className="text-[0.85rem] text-brand-900 font-bold tracking-widest leading-none">美容液成分</span>
-                  <div className="flex items-baseline justify-center text-brand-900 leading-none -mt-1">
-                    <span className="font-display text-[4rem] font-medium tracking-tighter">86</span>
-                    <span className="font-display text-2xl font-light ml-0.5 -translate-y-1">%</span>
-                  </div>
-                </div>
-              </motion.div>
-
-            </div>
+            <span className="inline-block px-3 py-1 bg-white/60 backdrop-blur-md border border-slate-200/50 rounded-full text-slate-600 font-sans text-[10px] md:text-xs tracking-[0.2em] uppercase shadow-sm">
+              New Arrival
+            </span>
           </motion.div>
 
-          {/* Vertical Typography (Right Side) */}
-          <motion.div
+          <h1 className="text-slate-800 mb-6 relative">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.4 }}
+              className="font-display font-medium text-2xl md:text-5xl lg:text-6xl tracking-wide leading-relaxed drop-shadow-sm text-brand-900"
+            >
+              <span className="block text-xl md:text-3xl lg:text-4xl mb-2 md:mb-4 text-brand-500 font-light">
+                なんとなく不調が続く肌へ。
+              </span>
+              <span className="bg-white/40 backdrop-blur-sm rounded-lg px-2 decoration-clone box-decoration-slice leading-snug py-1">
+                <span className="inline-block whitespace-nowrap">もっとうるおって、</span><br />
+                <span className="inline-block whitespace-nowrap">ずーっと<span className="text-brand-400 font-semibold">ゆらがない肌</span>へ。</span>
+              </span>
+            </motion.div>
+          </h1>
+
+          <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.5 }}
-            className="absolute right-0 md:right-10 top-1/2 -translate-y-1/2 hidden md:flex flex-row-reverse gap-8 h-[70vh] items-start pt-20"
+            transition={{ duration: 1, delay: 0.8 }}
+            className="font-sans text-slate-700 text-sm md:text-base leading-8 tracking-wider mb-8 max-w-lg mx-auto md:mx-0 p-4 bg-white/30 backdrop-blur-sm rounded-xl border border-white/40 shadow-sm"
           >
-            {/* Main Copy (Vertical) */}
-            <h1 className="font-serif text-brand-900 text-6xl tracking-widest leading-loose" style={{ writingMode: 'vertical-rl' }}>
-              <span className="inline-block whitespace-nowrap mb-8">浸透ショット</span>
-              <span className="inline-block whitespace-nowrap text-brand-400">エイジングデザイン</span>
-            </h1>
+            肌の基礎体力に着目。<br />
+            ３ステップで、ハリツヤ続く肌に。<br />
+            <span className="text-xs text-slate-500 block mt-2">*1 肌のバリア機能を保つこと</span>
+          </motion.p>
 
-            {/* Sub Copy (Vertical) */}
-            <p className="font-sans text-brand-500 text-sm tracking-widest leading-loose pt-4" style={{ writingMode: 'vertical-rl' }}>
-              なんとなく不調が続く肌へ。<br />
-              もっとうるおって、<br />
-              ずーっとゆらがない肌へ。
-            </p>
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 1.2 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
+          >
+            <button className="bg-[#8E9B96] text-white px-8 py-3 rounded-full hover:bg-[#7A8883] transition-colors duration-300 font-sans tracking-widest text-sm shadow-md">
+              成分を見る
+            </button>
+            <button className="border border-[#8E9B96] text-[#8E9B96] px-8 py-3 rounded-full hover:bg-[#8E9B96] hover:text-white transition-all duration-300 font-sans tracking-widest text-sm">
+              詳しくはこちら
+            </button>
           </motion.div>
-
-          {/* Mobile Typography (Horizontal - fallback for small screens) */}
-          <div className="absolute bottom-20 left-0 w-full text-center md:hidden px-4">
-            <h1 className="font-serif text-brand-900 text-3xl mb-4">
-              浸透ショット<br />
-              <span className="text-brand-400">エイジングデザイン</span>
-            </h1>
-            <p className="text-sm text-brand-600 mb-6">ずーっとゆらがない肌へ。</p>
-            <div className="flex justify-center gap-4">
-              <button className="bg-[#8E9B96] text-white px-6 py-2 rounded-full text-xs tracking-widest">成分を見る</button>
-              <button className="border border-[#8E9B96] text-[#8E9B96] px-6 py-2 rounded-full text-xs tracking-widest">詳しくはこちら</button>
-            </div>
-          </div>
-
         </div>
+
+        {/* Product Image - Mobile: Bottom, Desktop: Right */}
+        <motion.div
+          className="flex-1 relative z-10 w-full max-w-[400px] md:max-w-[500px] order-2 md:order-2 mt-8 md:mt-0"
+          style={{ y, opacity }}
+        >
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 1.2, delay: 0.5, type: "spring", stiffness: 50 }}
+            className="relative"
+          >
+            {/* Main Product Image */}
+            <img
+              src="/images/fictional-foundation.png"
+              alt="Fictional Foundation Product"
+              className="w-full h-auto drop-shadow-2xl object-contain hover:scale-105 transition-transform duration-700 ease-out"
+            />
+
+            <div className="absolute top-6 -right-8 md:-right-16 w-36 h-36 bg-white rounded-full shadow-xl shadow-water-100/20 flex flex-col items-center justify-center border border-water-200 animate-float-slow z-20 pb-1">
+              <div className="relative z-10 flex flex-col items-center justify-center">
+                <span className="text-[0.85rem] text-brand-900 font-bold tracking-widest leading-none">美容液成分</span>
+                <div className="flex items-baseline justify-center text-brand-900 leading-none -mt-1">
+                  <span className="font-display text-[4rem] font-medium tracking-tighter">86</span>
+                  <span className="font-display text-2xl font-light ml-0.5 -translate-y-1">%</span>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </motion.div>
 
       </div>
 
