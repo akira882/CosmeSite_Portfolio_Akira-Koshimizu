@@ -14,6 +14,7 @@ import ProjectInsight from './components/ProjectInsight';
 import DesignProcess from './components/DesignProcess';
 import OrbisUXProposal from './components/OrbisUXProposal';
 import StrategicBreakdown from './components/StrategicBreakdown';
+import Comparison from './components/Comparison';
 
 const App: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -37,6 +38,9 @@ const App: React.FC = () => {
 
           {/* B: Belief - Scientific Details */}
           <Features />
+
+          {/* C: Comparison - Hack the Search (New) */}
+          <Comparison />
 
           {/* Emotional Bridge / Brand Story Image */}
           <div className="h-[400px] md:h-[600px] bg-fixed bg-bottom bg-cover relative bg-brand-50"
