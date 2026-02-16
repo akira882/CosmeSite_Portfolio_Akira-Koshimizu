@@ -15,6 +15,7 @@ import DesignProcess from './components/DesignProcess';
 import OrbisUXProposal from './components/OrbisUXProposal';
 import StrategicBreakdown from './components/StrategicBreakdown';
 import Comparison from './components/Comparison';
+import FinalCTA from './components/FinalCTA';
 
 const App: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -68,6 +69,9 @@ const App: React.FC = () => {
 
           {/* B: Belief/Satisfaction - Social Proof */}
           <Reviews />
+
+          {/* Final Logic: Re-Closing after Social Proof */}
+          <FinalCTA />
 
           {/* --- New Sections for Portfolio --- */}
           {/* Design Process / Rationale */}
